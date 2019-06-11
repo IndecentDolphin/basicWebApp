@@ -13,5 +13,15 @@ get '/welcome/' do
 end
 
 get '/cat/' do
+  # @name = ["Rem", "Petra"].sample
+  p params
+  @name = params[:name]
+  p @name
+  erb(:cat)
+end
+
+get '/named-cat/' do
+  p params
+  @name = params[:name]
   erb(:index)
 end
