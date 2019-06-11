@@ -13,14 +13,15 @@ get '/welcome/' do
 end
 
 get '/cat/' do
-  # @name = ["Rem", "Petra"].sample
-  p params
-  @name = params[:name]
-  p @name
+  @name = ["Rem", "Petra"].sample
   erb(:cat)
 end
 
-get '/named-cat/' do
+get '/cat-form/' do
+  erb :cat_form
+end
+
+post '/named-cat/' do
   p params
   @name = params[:name]
   erb(:index)
